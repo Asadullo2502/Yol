@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <div class="gameOver" id="gameover">
+        <h1 class="oyin">Game Over</h1>
+        <p class="hulosa">Hatolar ustida ishlashga o`rganing</p>
+
+        <a href="index.html" class="restart">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            RESTART
+        </a>
+    </div>
+    
+    <div class="section container" id="glavniy">
+        <form action="" id="formEl">
+            <div class="section-items">
+                <h3>Сложность</h3>
+                <select name="" id="qiyin">
+                    <option value="ease">Легкий</option>
+                    <option value="normal">Средный</option>
+                    <option value="hard">Сложный</option>
+                </select>
+            </div>
+            <div class="section-items">
+                <h3>Время</h3>
+                <select name="" id="vaqt">
+                    <option value="1" selected>1 мин.</option>
+                    <option value="5">5 мин.</option>
+                    <option value="7">7 мин.</option>
+                    <option value="10">10 мин.</option>
+                </select>
+            </div>
+            <div class="section-items">
+                <button type="submit">
+                    СТАРТ
+                </button>
+            </div>  
+        </form>
+    </div>
+
+    <div class="section1 container" id="game">
+        <h2 class="voht">
+            <span id="minut"></span>:<span id="sekund"></span>
+        </h2>
+
+        <div class="section1-inner">
+            <div class="section1-inner-header">
+                <h2 id="savol">lorem</h2>
+            </div>
+
+            <div class="section1-inner-body" id="btnWrapper">
+                
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="./scripts/main.js"></script>
+</body>
+</html>
