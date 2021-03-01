@@ -523,8 +523,8 @@ h1, h2, h3, h4, h5, h6, a, p {
         flex-wrap: wrap;
   }
   .section1-inner-body button {
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
     margin-right: 5px;
     margin-left: 5px;
     margin-bottom: 10px;
@@ -542,8 +542,8 @@ h1, h2, h3, h4, h5, h6, a, p {
             justify-content: center;
   }
   .section1-inner-body button img {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
   }
   .gameOver {
     display: -webkit-box;
