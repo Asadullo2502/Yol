@@ -92,6 +92,7 @@ h1, h2, h3, h4, h5, h6, a, p {
 }
 
 .section1 {
+  width: 100%;
   display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -135,17 +136,14 @@ h1, h2, h3, h4, h5, h6, a, p {
   width: 100%;
 }
 
-.section1-inner-header h2 {
+.section1-inner-header {
   width: 100%;
   position: fixed;
   margin: 0 auto;
   top: 0;
   left: 0;
-  right: 0;
-  color: black;
   padding: 10px 0;
   margin-bottom: 50px;
-  font-size: 36px;
   text-align: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -154,6 +152,11 @@ h1, h2, h3, h4, h5, h6, a, p {
   -webkit-box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
           box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
   z-index: 1000;
+}
+
+.section1-inner-header h2 {
+  color: black;
+  font-size: 36px;
 }
 
 .section1-inner-body {
@@ -452,97 +455,43 @@ h1, h2, h3, h4, h5, h6, a, p {
     max-width: 540px;
     margin: 0 auto;
     padding: 0 15px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
-  .section {
-    position: fixed;
-    left: 0;
-    right: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 100%;
-    height: 100vh;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .section-items {
+    margin: 0;
   }
-  .section h3 {
-    color: white;
-    text-align: center;
+  .section-items h3 {
+    color: black;
+    margin: 0;
+    margin-bottom: 20px;
   }
   .section-items select {
-    border: none;
-    border-bottom: 5px solid white;
-    background: transparent;
-    color: black;
-    font-size: 12px;
-    text-align: center;
-    border-radius: 16px;
-    border: none;
-    -webkit-box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
-            box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
-    overflow: hidden;
-    outline: none;
-    cursor: pointer;
-  }
-  .section-items select:focus {
-    outline: none;
-  }
-  .section-items select option {
-    background-color: white;
-    color: black;
+    margin-bottom: 20px;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   .section-items button {
-    font-size: 15px;
-    color: black;
-    background: white;
-    text-align: center;
-    border-radius: 16px;
-    border: none;
-    -webkit-box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
-            box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
-    overflow: hidden;
-    outline: none;
-    cursor: pointer;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   .section1 {
+    margin-top: 80px;
+    margin-bottom: 50px;
     width: 100%;
   }
   .section1 .voht {
     position: fixed;
-    width: 100%;
+    bottom: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    border: none;
-    -webkit-box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
-            box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
-    font-size: 12px;
-    text-align: center;
-    background: white;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    z-index: 5555555;
-  }
-  .section1 .voht span {
-    font-size: 12px;
+    width: 100%;
+    border-radius: 0;
   }
   .section1-inner {
     width: 100%;
+    padding: 0;
   }
   .section1-inner-header {
     position: fixed;
@@ -550,25 +499,17 @@ h1, h2, h3, h4, h5, h6, a, p {
     top: 0;
     left: 0;
     right: 0;
-    padding: 10px 15px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    text-align: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    background-color: white;
-    -webkit-box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
-            box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
-    z-index: 1000;
+    margin: 0;
+  }
+  .section1-inner-header #savol {
+    font-size: 18px;
   }
   .section1-inner-header h2 {
     color: black;
     font-size: 10px;
-    position: absolute;
   }
   .section1-inner-body {
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -580,80 +521,20 @@ h1, h2, h3, h4, h5, h6, a, p {
             align-items: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-top: 50px;
   }
   .section1-inner-body button {
-    width: 60px;
-    height: 60px;
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    background: rgba(245, 245, 245, 0.541);
-    border: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    border-radius: 16px;
-    border: none;
-    -webkit-box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
-            box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
-    overflow: hidden;
-    outline: none;
+    width: 70px;
+    height: 70px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 10px;
     cursor: pointer;
     -webkit-transition: all ease 0.5s;
     transition: all ease 0.5s;
   }
-  .section1-inner-body button:after {
-    content: "";
-    position: absolute;
-    width: 200%;
-    height: 100%;
-    opacity: 0;
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-    background: rgba(255, 255, 255, 0.13);
-    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.13)), color-stop(77%, rgba(255, 255, 255, 0.13)), color-stop(92%, rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.3)));
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0.13) 77%, rgba(255, 255, 255, 0.5) 92%, rgba(255, 255, 255, 0.3) 100%);
-  }
-  .section1-inner-body button:focus {
-    outline: none;
-  }
-  .section1-inner-body button:hover {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
-    -webkit-transition: all ease 0.5s;
-    transition: all ease 0.5s;
-  }
-  .section1-inner-body button:hover:after {
-    opacity: 1;
-    top: 0;
-    left: 0;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    -webkit-transition-property: opacity, -webkit-transform;
-    transition-property: opacity, -webkit-transform;
-    transition-property: transform, opacity;
-    transition-property: transform, opacity, -webkit-transform;
-    -webkit-transition-duration: 0.7s, 0.15s;
-            transition-duration: 0.7s, 0.15s;
-    -webkit-transition-timing-function: ease;
-            transition-timing-function: ease;
-    outline: none;
-  }
   .section1-inner-body button img {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    border: 10px solid transparent;
-    width: 50px;
-    height: 50px;
-    -webkit-transition: all ease 0.5s;
-    transition: all ease 0.5s;
+    width: 60px;
+    height: 60px;
   }
   .gameOver {
     display: -webkit-box;
@@ -688,23 +569,24 @@ h1, h2, h3, h4, h5, h6, a, p {
   }
   .gameOver h1 {
     color: white;
-    letter-spacing: 1px;
+    letter-spacing: 5px;
     font-size: 20px;
   }
   .gameOver p {
     margin-top: 10px;
     color: white;
-    font-size: 12px;
+    text-align: center;
+    font-size: 18px;
   }
   .gameOver a {
-    padding: 10px 20px;
+    padding: 20px 30px;
     color: white;
     text-decoration: none;
     font-size: 15px;
     position: relative;
     overflow: hidden;
-    margin-top: 50px;
-    letter-spacing: 3px;
+    margin-top: 20px;
+    letter-spacing: 5px;
   }
   .gameOver a:hover {
     background: white;

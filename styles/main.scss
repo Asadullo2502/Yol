@@ -87,6 +87,7 @@ h1, h2, h3, h4, h5, h6, a, p {
 }
 
 .section1 {
+    width: 100%;
     display: none;
     align-items: center;
     justify-content: center;
@@ -119,23 +120,27 @@ h1, h2, h3, h4, h5, h6, a, p {
         padding: 20px;
         width: 100%;
 
-        &-header h2{
+        &-header {
             width: 100%;
             position: fixed;
             margin: 0 auto;
             top: 0;
             left: 0;
-            right: 0;
-            color: black;
+            
             padding: 10px 0;
             margin-bottom: 50px;
-            font-size: 36px;
+            
             text-align: center;
             justify-content: center;
             background-color: white;
             box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
             -9px -9px 16px rgba(255, 255, 255, 0.5);
             z-index: 1000;
+
+            h2 {
+                color: black;
+                font-size: 36px;
+            }
         }
 
         &-body {
@@ -379,216 +384,97 @@ h1, h2, h3, h4, h5, h6, a, p {
         max-width: 540px;
         margin: 0 auto;
         padding: 0 15px;
+        box-sizing: border-box;
     }
 
     .section {
-        position: fixed;
-        left: 0;
-        right: 0;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100vh;
-        flex-direction: column;
-
-        h3 {
-            color: white;
-            text-align: center;
-            ;
-
-        }
-
+        
         &-items {
-            
-
-            select {
-                border: none;
-                border-bottom: 5px solid white;
-                background: transparent;
+            margin: 0;
+            h3 {
                 color: black;
-                
-                
-                font-size: 12px;
-                text-align: center;
-                border-radius: 16px;
-                border: none;
-                box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
-                    -9px -9px 16px rgba(255, 255, 255, 0.5);
-                overflow: hidden;
-                outline: none;
-                cursor: pointer;
-
-                &:focus {
-                    outline: none;
-                }
-
-                option {
-                    background-color: white;
-                    color: black;
-                }
-
-
+                margin: 0;
+                margin-bottom: 20px;
+            }
+            select {
+                margin-bottom: 20px;
+                padding: 10px;
+                box-sizing: border-box;
 
             }
 
             button {
-                
-                font-size: 15px;
-                color: black;
-                background: white;
-                text-align: center;
-                border-radius: 16px;
-                border: none;
-                
-                box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
-                    -9px -9px 16px rgba(255, 255, 255, 0.5);
-                overflow: hidden;
-                outline: none;
-                cursor: pointer;
-
+                box-sizing: border-box;
             }
         }
     }
 
     .section1 {
+        margin-top: 80px;
+        margin-bottom: 50px;
         width: 100%;
-        
-
-
-
         .voht {
             position: fixed;
-            width: 100%;
-
+            bottom: 0;
             left: 0;
             right: 0;
-            bottom: 0;
-            border: none;
-            box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
-                -9px -9px 16px rgba(255, 255, 255, 0.5);
-            font-size: 12px;
-            text-align: center;
-            
-            
-            background: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 5555555;
+            width: 100%;
+            border-radius: 0;
 
-            span {
-                font-size: 12px;
-            }
+            
 
         }
 
         &-inner {
-
-            
             width: 100%;
-
+            padding: 0;
             &-header {
-                
                 position: fixed;
                 width: 100%;
                 top: 0;
                 left: 0;
                 right: 0;
-                padding: 10px 15px;
+                margin: 0;
                 
-                display: flex;
-                text-align: center;
-                justify-content: center;
-                background-color: white;
-                box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
-                    -9px -9px 16px rgba(255, 255, 255, 0.5);
-                z-index: 1000;
+
+                #savol {
+                    font-size: 18px;
+                }
 
                 h2 {
                     color: black;
                     font-size: 10px;
-                    position: absolute;
                 }
             }
 
             &-body {
+                width: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-wrap: wrap;
-                margin-top: 50px;
                 
 
 
 
 
                 button {
-                    width: 60px;
-                    height: 60px;
-                    margin-right: 20px;
-                    margin-left: 20px;
-                    margin-bottom: 20px;
-                    background: rgba(245, 245, 245, 0.541);
-                    border: none;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-radius: 16px;
-                    border: none;
-                    box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
-                        -9px -9px 16px rgba(255, 255, 255, 0.5);
-                    overflow: hidden;
-                    outline: none;
+                    width: 70px;
+                    height: 70px;
+                    margin-right: 5px;
+                    margin-left: 5px;
+                    margin-bottom: 10px;
                     cursor: pointer;
                     transition: all ease 0.5s;
 
-                    &:after {
-                        content: "";
-                        position: absolute;
-                        width: 200%;
-                        height: 100%;
-                        opacity: 0;
-                        transform: translateX(-100%);
-                        background: rgba(255, 255, 255, 0.13);
-                        background: linear-gradient(to right,
-                                rgba(255, 255, 255, 0.13) 0%,
-                                rgba(255, 255, 255, 0.13) 77%,
-                                rgba(255, 255, 255, 0.5) 92%,
-                                rgba(255, 255, 255, 0.3) 100%);
-                    }
-
-
-                    &:focus {
-                        outline: none;
-                    }
-
-                    &:hover {
-                        transform: translateY(-10px);
-                        transition: all ease 0.5s;
-                    }
-
-                    &:hover:after {
-                        opacity: 1;
-                        top: 0;
-                        left: 0;
-                        transform: translateX(0);
-                        transition-property: transform, opacity;
-                        transition-duration: 0.7s, 0.15s;
-                        transition-timing-function: ease;
-                        outline: none;
-                    }
+                    
 
 
                     img {
 
-                        box-sizing: border-box;
-
-                        border: 10px solid transparent;
-                        width: 50px;
-                        height: 50px;
-                        transition: all ease 0.5s;
+                        width: 60px;
+                        height: 60px;
+                        
 
 
 
@@ -596,9 +482,7 @@ h1, h2, h3, h4, h5, h6, a, p {
                     }
                 }
             }
-
         }
-
     }
 
     .gameOver {
@@ -613,7 +497,7 @@ h1, h2, h3, h4, h5, h6, a, p {
         background: rgba(0, 0, 0, 0.616);
         transform: scale(0);
         transition: all cubic-bezier(0.51, 1.13, 0.62, 1.25) 0.5s;
-
+        
         z-index: 555555555555;
 
         &.show {
@@ -624,7 +508,7 @@ h1, h2, h3, h4, h5, h6, a, p {
 
         h1 {
             color: white;
-            letter-spacing: 1px;
+            letter-spacing: 5px;
             font-size: 20px;
 
         }
@@ -632,18 +516,19 @@ h1, h2, h3, h4, h5, h6, a, p {
         p {
             margin-top: 10px;
             color: white;
-            font-size: 12px;
+            text-align: center;
+            font-size: 18px;
         }
 
         a {
-            padding: 10px 20px;
+            padding: 20px 30px;
             color: white;
             text-decoration: none;
             font-size: 15px;
             position: relative;
             overflow: hidden;
-            margin-top: 50px;
-            letter-spacing: 3px;
+            margin-top: 20px;
+            letter-spacing: 5px;
 
             &:hover {
                 background: white;
@@ -651,8 +536,11 @@ h1, h2, h3, h4, h5, h6, a, p {
             }
 
 
-            
+           
         }
     }
+
+    
+    
 
 }
