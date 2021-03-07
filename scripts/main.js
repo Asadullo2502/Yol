@@ -247,7 +247,7 @@ let savollar = [{
     }, {
         id: 58,
         savol: 'Mexanik transport vositalarining harakatlanishi taqiqlangan',
-        javob: `../images/59.gif`
+        javob: `../images/58.gif`
     }, {
         id: 59,
         savol: 'Yuk avtomobillarining harakatlanishi taqiqlangan',
