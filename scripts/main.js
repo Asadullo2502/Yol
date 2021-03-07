@@ -528,7 +528,7 @@ function logika(savolSon,b) {
                 sekund.innerHTML = parseInt(sekund.innerHTML) + 3;
                 if (boxSavol.length == 1) {
                     gameOverH1.innerHTML = 'YOU WIN';
-                    gameOverP.innerHTML = 'Pravani pulga olmagan ekansiz ;)';
+                    gameOverP.innerHTML = 'Shunday davom eting :)';
                     sekund.innerHTML = "00";
                     minut.innerHTML = "00";
                     gameOver.classList.add('show');
