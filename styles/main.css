@@ -6,6 +6,8 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
 }
 
 h1, h2, h3, h4, h5, h6, a, p {
@@ -43,22 +45,51 @@ h1, h2, h3, h4, h5, h6, a, p {
 }
 
 .section h3 {
-  color: white;
+  color: black;
   text-align: center;
   margin-bottom: 20px;
 }
 
+.section form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .section-items {
+  width: 100%;
   margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .section-items select {
   border: none;
   border-bottom: 5px solid white;
-  background: transparent;
-  color: black;
+  color: white;
+  background: radial-gradient(darkblue, black);
   padding: 20px 30px;
-  width: 180px;
   font-size: 28px;
   text-align: center;
   border-radius: 16px;
@@ -80,12 +111,11 @@ h1, h2, h3, h4, h5, h6, a, p {
 }
 
 .section-items button {
-  width: 180px;
+  position: relative;
   font-size: 30px;
-  color: black;
-  background: white;
   text-align: center;
-  border-radius: 16px;
+  color: white;
+  background: radial-gradient(darkblue, black);
   border: none;
   padding: 20px 30px;
   -webkit-box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
@@ -93,6 +123,196 @@ h1, h2, h3, h4, h5, h6, a, p {
   overflow: hidden;
   outline: none;
   cursor: pointer;
+}
+
+.section-items button:hover {
+  background: white;
+  color: darkblue;
+}
+
+.section-items button:hover .span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), to(darkblue));
+  background: linear-gradient(90deg, transparent, darkblue);
+  -webkit-animation: animate1 1s linear infinite;
+          animation: animate1 1s linear infinite;
+}
+
+.section-items button:hover .span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(darkblue));
+  background: linear-gradient(180deg, transparent, darkblue);
+  -webkit-animation: animate2 1s linear infinite;
+          animation: animate2 1s linear infinite;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+.section-items button:hover .span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, right top, left top, from(transparent), to(darkblue));
+  background: linear-gradient(270deg, transparent, darkblue);
+  -webkit-animation: animate3 1s linear infinite;
+          animation: animate3 1s linear infinite;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.section-items button:hover .span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(darkblue));
+  background: linear-gradient(360deg, transparent, darkblue);
+  -webkit-animation: animate4 1s linear infinite;
+          animation: animate4 1s linear infinite;
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+.section-items button .span {
+  position: absolute;
+  display: block;
+}
+
+.section-items button .span:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), to(white));
+  background: linear-gradient(90deg, transparent, white);
+  -webkit-animation: animate1 1s linear infinite;
+          animation: animate1 1s linear infinite;
+}
+
+@-webkit-keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.section-items button .span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(white));
+  background: linear-gradient(180deg, transparent, white);
+  -webkit-animation: animate2 1s linear infinite;
+          animation: animate2 1s linear infinite;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+@-webkit-keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.section-items button .span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, right top, left top, from(transparent), to(white));
+  background: linear-gradient(270deg, transparent, white);
+  -webkit-animation: animate3 1s linear infinite;
+          animation: animate3 1s linear infinite;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+@-webkit-keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.section-items button .span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(transparent), to(white));
+  background: linear-gradient(360deg, transparent, white);
+  -webkit-animation: animate4 1s linear infinite;
+          animation: animate4 1s linear infinite;
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+}
+
+@-webkit-keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
 }
 
 .section1 {
@@ -184,7 +404,7 @@ h1, h2, h3, h4, h5, h6, a, p {
   margin-right: 20px;
   margin-left: 20px;
   margin-bottom: 20px;
-  background: rgba(245, 245, 245, 0.541);
+  background: white;
   border: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -334,16 +554,6 @@ h1, h2, h3, h4, h5, h6, a, p {
           animation: animate1 1s linear infinite;
 }
 
-@-webkit-keyframes animate1 {
-  0% {
-    left: -100%;
-  }
-  50%,
-  100% {
-    left: 100%;
-  }
-}
-
 @keyframes animate1 {
   0% {
     left: -100%;
@@ -365,16 +575,6 @@ h1, h2, h3, h4, h5, h6, a, p {
           animation: animate2 1s linear infinite;
   -webkit-animation-delay: 0.25s;
           animation-delay: 0.25s;
-}
-
-@-webkit-keyframes animate2 {
-  0% {
-    top: -100%;
-  }
-  50%,
-  100% {
-    top: 100%;
-  }
 }
 
 @keyframes animate2 {
@@ -400,16 +600,6 @@ h1, h2, h3, h4, h5, h6, a, p {
           animation-delay: 0.5s;
 }
 
-@-webkit-keyframes animate3 {
-  0% {
-    right: -100%;
-  }
-  50%,
-  100% {
-    right: 100%;
-  }
-}
-
 @keyframes animate3 {
   0% {
     right: -100%;
@@ -431,16 +621,6 @@ h1, h2, h3, h4, h5, h6, a, p {
           animation: animate4 1s linear infinite;
   -webkit-animation-delay: 0.75s;
           animation-delay: 0.75s;
-}
-
-@-webkit-keyframes animate4 {
-  0% {
-    bottom: -100%;
-  }
-  50%,
-  100% {
-    bottom: 100%;
-  }
 }
 
 @keyframes animate4 {

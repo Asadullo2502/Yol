@@ -453,7 +453,7 @@ function getRandomInt(max) {
 
 
 function timeSet() {
-    minut.innerHTML = timeSelect.value - 1;
+    minut.innerHTML = `0${timeSelect.value - 1}`;
     sekund.innerHTML = '59';
     setInterval(() => {
         if (sekund.innerHTML <= 0 && minut.innerHTML <= 0) {
@@ -462,12 +462,16 @@ function timeSet() {
             sekund.style.color = 'red';
             minut.style.color = 'red';
             gameOver.classList.add('show');
-        } else if (minut.innerHTML >= 0 && sekund.innerHTML == 0) {
+        } else if (minut.innerHTML >= 0 && sekund.innerHTML <= 0) {
             sekund.innerHTML = '59';
-            minut.innerHTML = `${minut.innerHTML - 1}`
+            minut.innerHTML = `0${minut.innerHTML - 1}`
 
         } else {
-            sekund.innerHTML = `${sekund.innerHTML - 1}`;
+            if(sekund.innerHTML <= 10) {
+                sekund.innerHTML = `0${sekund.innerHTML - 1}`
+            }else {
+                sekund.innerHTML = `${sekund.innerHTML - 1}`;
+            }
         }
 
     }, 1000);
@@ -521,13 +525,16 @@ function logika(savolSon,b) {
                 b = b - 1;
                 remdomSavol = getRandomInt(b);
                 savolEl.innerHTML = `${boxSavol[remdomSavol].savol}`;
+                sekund.innerHTML = parseInt(sekund.innerHTML) + 3;
                 if (boxSavol.length == 1) {
                     gameOverH1.innerHTML = 'YOU WIN';
                     gameOverP.innerHTML = 'Pravani pulga olmagan ekansiz ;)';
+                    sekund.innerHTML = "00";
+                    minut.innerHTML = "00";
                     gameOver.classList.add('show');
                 }
             } else {
-                sekund.innerHTML = sekund.innerHTML - 5;
+                sekund.innerHTML = parseInt(sekund.innerHTML) - 6;
                 elem.style.border = '10px solid red';
                 setTimeout(() => {
                     elem.style.border = '10px solid transparent';
@@ -557,6 +564,7 @@ formEl.addEventListener('submit', function (e) {
                 logika(34, 34);
 
             break;
+            
 
 
 
@@ -573,3 +581,4 @@ btn.forEach(item => {
 
     })
 })
+

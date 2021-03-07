@@ -3,6 +3,7 @@ body {
     padding: 0;
     font-family: sans-serif;
     user-select: none;
+    transition: all ease 0.5s;
     
 }
 
@@ -32,21 +33,33 @@ h1, h2, h3, h4, h5, h6, a, p {
     height: 100vh;
     flex-direction: column;
     h3 {
-        color: white;
+        color: black;
         text-align: center;
         margin-bottom: 20px;
         
     }
 
+    form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
     &-items {
+        width: 100%;
         margin-bottom: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
         select {
             border: none;
             border-bottom: 5px solid white;
-            background: transparent;
-            color: black;
+            color: white;
+            background: radial-gradient(darkblue, black);
             padding: 20px 30px;
-            width: 180px;
+            
             font-size: 28px;
             text-align: center;
             border-radius: 16px;
@@ -69,12 +82,12 @@ h1, h2, h3, h4, h5, h6, a, p {
         }
 
         button {
-            width: 180px;
+
+            position: relative;
             font-size: 30px;
-            color: black;
-            background: white;
             text-align: center;
-            border-radius: 16px;
+            color: white;
+            background: radial-gradient(darkblue, black);
             border: none;
             padding: 20px 30px;
             box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
@@ -82,6 +95,152 @@ h1, h2, h3, h4, h5, h6, a, p {
             overflow: hidden;
             outline: none;
             cursor: pointer;
+
+
+            &:hover {
+                background: white;
+                color: darkblue;
+
+                .span {
+                    &:nth-child(1) {
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background: linear-gradient(90deg, transparent, darkblue);
+                        animation: animate1 1s linear infinite;
+
+                    }
+                    &:nth-child(2) {
+                        top: -100%;
+                        right: 0;
+                        width: 2px;
+                        height: 100%;
+                        background: linear-gradient(180deg, transparent, darkblue);
+                        animation: animate2 1s linear infinite;
+                        animation-delay: 0.25s;
+
+                    }
+                    &:nth-child(3) {
+                        bottom: 0;
+                        right: -100%;
+                        width: 100%;
+                        height: 2px;
+                        background: linear-gradient(270deg, transparent, darkblue);
+                        animation: animate3 1s linear infinite;
+                        animation-delay: 0.5s;
+
+                    }
+                    &:nth-child(4) {
+                        bottom: -100%;
+                        left: 0;
+                        width: 2px;
+                        height: 100%;
+                        background: linear-gradient(360deg, transparent, darkblue);
+                        animation: animate4 1s linear infinite;
+                        animation-delay: 0.75s;
+
+                    }
+                }
+            }
+            
+
+
+            .span {
+                position: absolute;
+                display: block;
+
+                &:nth-child(1) {
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background: linear-gradient(90deg, transparent, white);
+                    animation: animate1 1s linear infinite;
+
+                }
+
+                @keyframes animate1 {
+                    0% {
+                        left: -100%;
+
+                    }
+
+                    50%,
+                    100% {
+                        left: 100%;
+                    }
+                }
+
+                &:nth-child(2) {
+                    top: -100%;
+                    right: 0;
+                    width: 2px;
+                    height: 100%;
+                    background: linear-gradient(180deg, transparent, white);
+                    animation: animate2 1s linear infinite;
+                    animation-delay: 0.25s;
+
+                }
+
+                @keyframes animate2 {
+                    0% {
+                        top: -100%;
+
+                    }
+
+                    50%,
+                    100% {
+                        top: 100%;
+                    }
+                }
+
+                &:nth-child(3) {
+                    bottom: 0;
+                    right: -100%;
+                    width: 100%;
+                    height: 2px;
+                    background: linear-gradient(270deg, transparent, white);
+                    animation: animate3 1s linear infinite;
+                    animation-delay: 0.5s;
+
+                }
+
+                @keyframes animate3 {
+                    0% {
+                        right: -100%;
+
+                    }
+
+                    50%,
+                    100% {
+                        right: 100%;
+                    }
+                }
+
+                &:nth-child(4) {
+                    bottom: -100%;
+                    left: 0;
+                    width: 2px;
+                    height: 100%;
+                    background: linear-gradient(360deg, transparent, white);
+                    animation: animate4 1s linear infinite;
+                    animation-delay: 0.75s;
+
+                }
+
+                @keyframes animate4 {
+                    0% {
+                        bottom: -100%;
+
+                    }
+
+                    50%,
+                    100% {
+                        bottom: 100%;
+                    }
+                }
+            }
             
         }
     }
@@ -160,7 +319,7 @@ h1, h2, h3, h4, h5, h6, a, p {
                 margin-right: 20px;
                 margin-left: 20px;
                 margin-bottom: 20px;
-                background: rgba(245, 245, 245, 0.541);
+                background: white;
                 border: none;
                 display: flex;
                 align-items: center;
