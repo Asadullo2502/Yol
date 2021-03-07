@@ -20,30 +20,30 @@ let savollar = [{
         javob: `../images/5.gif`
     }, {
         id: 6,
-        savol: `3 Temir yo’l kesishmasining yaqinligi haqida ogohlantirish`,
+        savol: `O'ng tomoniga Temir yo’l kesishmasining yaqinligi 300m`,
         javob: `../images/6.gif`
     },
 
     {
         id: 7,
-        savol: `2 Temir yo’l kesishmasining yaqinligi haqida ogohlantirish`,
+        savol: `O'ng tomoniga Temir yo’l kesishmasining yaqinligi 200m`,
         javob: `../images/7.gif`
     }, {
         id: 8,
-        savol: `1.4.3 Temir yo’l kesishmasining yaqinligi haqida ogohlantirish`,
+        savol: `O'ng tomoniga Temir yo’l kesishmasining yaqinligi 100m`,
         javob: `../images/8.gif`
     }, {
         id: 9,
-        savol: `1.4.4 Temir yo’l kesishmasining yaqinligi haqida ogohlantirish`,
+        savol: `Chap tomoniga Temir yo’l kesishmasining yaqinligi 300m`,
         javob: `../images/9.gif`
     }, {
         id: 10,
-        savol: `1.4.5 Temir yo’l kesishmasining yaqinligi haqida ogohlantirish`,
+        savol: `Chap tomoniga Temir yo’l kesishmasining yaqinligi 200m`,
         javob: `../images/10.gif`
     },
     {
         id: 11,
-        savol: `1.4.6 Temir yo’l kesishmasining yaqinligi haqida ogohlantirish`,
+        savol: `Chap tomoniga Temir yo’l kesishmasining yaqinligi 100m`,
         javob: `../images/11.gif`
     }, {
         id: 12,
@@ -112,7 +112,7 @@ let savollar = [{
 
     {
         id: 27,
-        savol: 'Yo’lning torayishi o`rtaga',
+        savol: 'Ikki tomonlama torayish',
         javob: `../images/27.gif`
     }, {
         id: 28,
